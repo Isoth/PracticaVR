@@ -1,8 +1,10 @@
 {
   "dependencies": {
+    "com.google.xr.cardboard": "https://github.com/googlevr/cardboard-xr-plugin.git",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.2.0",
+    "com.unity.probuilder": "4.2.3",
     "com.unity.test-framework": "1.1.14",
     "com.unity.textmeshpro": "2.0.1",
     "com.unity.timeline": "1.2.14",
@@ -38,5 +40,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.google.xr.cardboard": {
+      "revision": "HEAD",
+      "hash": "38cb0047bbc1b5a56c113164c9915fe2d22bc664"
+    }
   }
 }
