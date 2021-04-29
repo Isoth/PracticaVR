@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.4.1/Hello Cardboard/Scenes/VrMode.unity
     guid: 4812ec05e87b8414abcdfe0d625c0e60
+  - enabled: 1
+    path: Assets/Scenes/Code.unity
+    guid: 7719ede2d72192447b5f10e1b9e79aac
   m_configObjects: {}
