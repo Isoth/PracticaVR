@@ -47,6 +47,7 @@ public class GuyDie : MonoBehaviour
         {
             anim.SetTrigger("EndNow");
             GameplayManager.GetInstance().points += this.pointsHit;
+            Destroy(this.gameObject);
             this.enabled = false;
         }
     }

@@ -109,8 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minStayTime: 3
   maxStayTime: 5
-  pointsHit: 0
-  pointsMiss: -200
+  pointsHit: -200
+  pointsMiss: 0
 --- !u!95 &-1244746114418365115
 Animator:
   serializedVersion: 3
