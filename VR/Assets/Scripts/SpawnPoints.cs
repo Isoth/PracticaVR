@@ -32,7 +32,8 @@ public class SpawnPoints : MonoBehaviour
         while (stop == false)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpawnTime));
-            Instantiate(typesOfPeople[Random.Range(0, typesOfPeople.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
+            GameObject person = Instantiate(typesOfPeople[Random.Range(0, typesOfPeople.Length)], spawnPoints[Random.Range(0, spawnPoints.Length)].transform);
+            Destroy(person.gameObject, 5); //Igual destruir en un Random.Range de segundos
         }
     }
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1930129542716363302}
   - component: {fileID: 6850369548806684471}
   - component: {fileID: 3616692388106700657}
+  - component: {fileID: 3932280731740311385}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_shootSound: {fileID: 8300000, guid: a0386a03438597946866c366df885c3a, type: 3}
   m_hitSound: {fileID: 8300000, guid: bdc53d0a883a82c45a531c0d4209f1a3, type: 3}
   m_impulse: 10
+--- !u!54 &3932280731740311385
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2797646216950911473}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
