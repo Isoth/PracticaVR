@@ -5,7 +5,8 @@ using UnityEngine.XR;
 
 public class Camera : MonoBehaviour
 {
-
+    public AudioClip m_shootSound;
+    public AudioSource bulletAs;
     public float camSens = 0.50f; //Sensibilidad con el ratón
     Vector3 lastMouse = new Vector3(255, 255, 255);
     [SerializeField] GameObject bullet;
@@ -41,16 +42,11 @@ public class Camera : MonoBehaviour
 
     void ShootABullet()
     {
-        GameObject bulletInstance = Instantiate(bullet, transform.position, transform.rotation);
-        Bullet bh = bulletInstance.GetComponent<Bullet>();
-        if (bh != null)
-        {
-            bh.Shoot(transform.forward);
-        }
-        else
-        {
-            Debug.Log("La Bullet no tiene Script BulletHandler");
-            Destroy(bulletInstance, 3f);
-        }
+        bulletAs.PlayOneShot(m_shootSound);
+        GameObject instFoam = Instantiate(bullet, transform.position, Quaternion.identity);
+        Rigidbody instFoamRB = instFoam.GetComponent<Rigidbody>();
+
+        instFoamRB.AddForce(this.transform.forward * 1000);
+        Destroy(instFoam, 3f);
     }
 }
