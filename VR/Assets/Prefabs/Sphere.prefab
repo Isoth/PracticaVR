@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -2798478211652630546}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_shootSound: {fileID: 8300000, guid: a0386a03438597946866c366df885c3a, type: 3}
   m_hitSound: {fileID: 8300000, guid: bdc53d0a883a82c45a531c0d4209f1a3, type: 3}
-  m_impulse: 1000
+  m_impulse: 2000
   m_camera: {fileID: 0}
 --- !u!54 &3242391284839585499
 Rigidbody:

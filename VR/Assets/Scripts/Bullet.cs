@@ -38,6 +38,7 @@ public class Bullet : MonoBehaviour
     {
         //hitPos.Play();
         bulletAs.Play();
+        Destroy(this.gameObject);
 
     }
 }

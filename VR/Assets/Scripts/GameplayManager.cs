@@ -9,33 +9,44 @@ public class GameplayManager : MonoBehaviour
 
     private static GameplayManager instance;
 
-    private float timeZero;
-    public float playingTime = 60f;
     public TextMeshProUGUI textPuntos;
     public TextMeshProUGUI textTiempo;
+
+    public float targetTime = 60.0f;
+    public float intTargetTime;
 
     public float points = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeZero = Time.realtimeSinceStartup;
         instance = this;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.realtimeSinceStartup > (playingTime + timeZero));
-        {
-            Application.Quit();
-        }
+        intTargetTime = (int)targetTime;
         textPuntos.text = points.ToString();
-        textTiempo.text = Time.realtimeSinceStartup.ToString();
+        textTiempo.text = intTargetTime.ToString();
+
+        targetTime -= Time.deltaTime;
+
+        if (targetTime <= 0.0f)
+        {
+            timerEnded();
+        }
+
     }
 
     public static GameplayManager GetInstance()
     {
         return instance;
+    }
+
+    void timerEnded()
+    {
+        Application.Quit();
     }
 }
