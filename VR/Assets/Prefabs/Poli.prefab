@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5058220882665495584}
   - component: {fileID: -6281386910509682738}
   - component: {fileID: 4236475066450594808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Poli
   m_TagString: Untagged
   m_Icon: {fileID: 0}

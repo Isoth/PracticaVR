@@ -43,12 +43,20 @@ public class Camera : MonoBehaviour
         _line.SetPosition(0, this.transform.position);
         _line.SetPosition(1, hit.point);
 
-        int LayerMask = 1 << 8;
+        int LayerMask = 1 << 5;
+        int LayerMask1 = 1 << 8;
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 500, LayerMask))
         {
             mirilla.SetActive(true);
             mirilla.transform.position = hit.point + hit.normal*0.1f;
+            mirilla.transform.rotation = hit.transform.rotation;
+            Debug.Log("Did Hit");
+        }
+        else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 500, LayerMask1))
+        {
+            mirilla.SetActive(true);
+            mirilla.transform.position = hit.point + hit.normal * 0.1f;
             mirilla.transform.rotation = hit.transform.rotation;
             Debug.Log("Did Hit");
         }

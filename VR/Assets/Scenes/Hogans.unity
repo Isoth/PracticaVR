@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 33ab377b49aa14f6fae6e5bac230a5d4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1306,7 +1306,7 @@ Transform:
   m_GameObject: {fileID: 501726796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.755}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
@@ -3381,7 +3381,7 @@ GameObject:
   - component: {fileID: 1243262178}
   - component: {fileID: 1243262177}
   - component: {fileID: 1243262176}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3473,8 +3473,8 @@ GameObject:
   - component: {fileID: 1275919213}
   - component: {fileID: 1275919214}
   - component: {fileID: 1275919215}
-  m_Layer: 0
-  m_Name: GameManager
+  m_Layer: 8
+  m_Name: GameplayManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3506,6 +3506,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1489e3f768c67ce498031ab1fc94a125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 673308722}
+  - {fileID: 1868936026}
+  - {fileID: 623811569}
+  - {fileID: 43021788}
+  - {fileID: 1531179755}
+  - {fileID: 1195617140}
+  typesOfPeople:
+  - {fileID: 7716343100987004393, guid: 1ddba91abc1b1e548890469f43a509d1, type: 3}
+  - {fileID: 4838301145921961559, guid: 34d4ef95fd342a34eb419f43f96ba236, type: 3}
+  - {fileID: 5946639752656977817, guid: 5f9fb1476faac2847944a645327556c5, type: 3}
+  - {fileID: 5646878949904955890, guid: 4aae813d4ceeee14ba03c4fc55dcc205, type: 3}
+  - {fileID: 7845013780681026425, guid: dc9bcab7ace296a4e914a488bfd2d5de, type: 3}
+  minSpawnTime: 0
+  maxSpawnTime: 3
 --- !u!114 &1275919215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3518,6 +3533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f84f9b690c063b84e8cf8bb29aba5ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textPuntos: {fileID: 2033226621}
+  textTiempo: {fileID: 1723499640}
+  targetTime: 60
+  intTargetTime: 0
+  points: 0
 --- !u!1 &1301998209
 GameObject:
   m_ObjectHideFlags: 0

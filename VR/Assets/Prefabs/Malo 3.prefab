@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8097683431847712038}
   - component: {fileID: 5568164236556005897}
   - component: {fileID: -172833230932067618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Malo 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
