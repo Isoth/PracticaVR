@@ -9,10 +9,10 @@ public class GameManager : MonoBehaviour
 {
     public float[] scores;
 
-    [SerializeField] TextMeshProUGUI[] scoreTexts;
-    public static TextMeshProUGUI[] staticScoreTexts;
+    /*[SerializeField] TextMeshProUGUI[] scoreTexts;
+    public static TextMeshProUGUI[] staticScoreTexts;*/
 
-    [SerializeField] float lastScore = 0;
+    public static float lastScore = 0;
 
     public string scene;
 
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         {
             if (_instance == null)
             {
-                _instance = GameObject.FindGameObjectWithTag("manager").GetComponent<GameManager>();
+                _instance = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
                 //Tell unity not to destroy this object when loading a new scene!
                 DontDestroyOnLoad(_instance.gameObject);
             }
@@ -53,15 +53,14 @@ public class GameManager : MonoBehaviour
                 Destroy(this.gameObject);
         }
 
-        print(lastScore);
 
-        for (int i = 0; i < scoreTexts.Length; i++)
+        /*for (int i = 0; i < scoreTexts.Length; i++)
         {
             if (staticScoreTexts[i] != null)
             {
                 staticScoreTexts[i] = scoreTexts[i];
             }           
-        }
+        }*/
 
         if (staticPanelMenu != null)
         {
@@ -81,8 +80,9 @@ public class GameManager : MonoBehaviour
         if (FindObjectOfType<GameplayManager>() != null)
         {
             lastScore = FindObjectOfType<GameplayManager>().points;
+            print(lastScore);
         }
-
+        /*
         if (lastScore > scores[0])
         {
             scores[0] = lastScore;
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         {
             scores[4] = lastScore;
             staticScoreTexts[4].text = scores[4].ToString();
-        }
+        }*/
     }
 
     public void ChangeScene(Collision other)

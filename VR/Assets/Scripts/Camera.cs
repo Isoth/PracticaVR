@@ -31,7 +31,7 @@ public class Camera : MonoBehaviour
             CameraPosition();
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || Google.XR.Cardboard.Api.IsTriggerPressed)
         {
             ShootABullet();
         }

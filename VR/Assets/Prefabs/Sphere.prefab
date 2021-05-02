@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56dfc1d946af3c4c806f6a7c10e47b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletAs: {fileID: -2798478211652630546}
   m_shootSound: {fileID: 8300000, guid: a0386a03438597946866c366df885c3a, type: 3}
   m_hitSound: {fileID: 8300000, guid: bdc53d0a883a82c45a531c0d4209f1a3, type: 3}
   m_impulse: 2000
@@ -4873,7 +4874,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

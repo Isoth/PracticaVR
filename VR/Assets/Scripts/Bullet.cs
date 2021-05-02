@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private ParticleSystem hitPos;
     private Rigidbody rb;
-    private AudioSource bulletAs;
+    public AudioSource bulletAs;
     public AudioClip m_shootSound;
     public AudioClip m_hitSound;
     public float m_impulse = 10f;
@@ -37,8 +37,7 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         //hitPos.Play();
-        bulletAs.Play();
+        AudioSource.PlayClipAtPoint(m_hitSound, other.transform.position);
         Destroy(this.gameObject);
-
     }
 }

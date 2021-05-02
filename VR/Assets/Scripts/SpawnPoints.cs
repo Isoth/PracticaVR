@@ -10,7 +10,7 @@ public class SpawnPoints : MonoBehaviour
     [SerializeField]
     private GameObject[] typesOfPeople;
 
-    public float minSpawnTime = 0f;
+    public float minSpawnTime = 1f;
     public float maxSpawnTime = 3f;
 
     private bool stop = false;
