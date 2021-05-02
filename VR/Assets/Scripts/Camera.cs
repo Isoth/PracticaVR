@@ -11,10 +11,16 @@ public class Camera : MonoBehaviour
     Vector3 lastMouse = new Vector3(255, 255, 255);
     [SerializeField] GameObject bullet;
 
+    public LineRenderer _line;
+    public float laserWidth = 0.1f;
+
+    public GameObject mirilla;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _line = gameObject.GetComponent<LineRenderer>();
+        gameObject.GetComponent<LineRenderer>().widthCurve = AnimationCurve.Linear(0, 0.1f, .5f, .1f);
     }
 
     // Update is called once per frame
@@ -28,6 +34,28 @@ public class Camera : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             ShootABullet();
+        }
+
+        //int LayerMask = 1 << 8;
+
+        RaycastHit hit;
+        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 500);
+        _line.SetPosition(0, this.transform.position);
+        _line.SetPosition(1, hit.point);
+
+        int LayerMask = 1 << 8;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 500, LayerMask))
+        {
+            mirilla.SetActive(true);
+            mirilla.transform.position = hit.point + hit.normal*0.1f;
+            mirilla.transform.rotation = hit.transform.rotation;
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            mirilla.SetActive(false);
+            Debug.Log("Did not Hit");
         }
     }
 
